@@ -14,6 +14,9 @@ docker run --restart always -v ${PWD}/data:/tmp/working -w=/tmp/working -p 8800:
 # 2. Access the log to get the http token for accessing Jupyter:
 >`docker logs kaggle`
 
+CURRENT TOKEN:
+> 40119a2f87c125c72f7603945ca6b1561e0fb9ed45929234
+
 For example:
 >`http://640b804c545b:8888/?token=8e28bf1201d83f3f43521fba4b0cf382107781a4955ecf93&token=8e28bf1201d83f3f43521fba4b0cf382107781a4955ecf93`
 
