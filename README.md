@@ -37,3 +37,25 @@ Enter your token and change the password.
 
 # 3. SSH into the container
 `docker exec -it kaggle bash`
+
+# 4. GEARBOX FAULT ANALYSIS
+## 4.1 Gearbox Fault logistic regression
+  - Using raw temporal serie: AUC= 0.514
+  - Using standard deviation over sets of consecutive data points (AUC):
+   - stdev every 10   data points: 0.717
+   - stdev every 100  data points: 0.911
+   - stdev every 1000 data points: 1.000
+
+## 4.2 Gearbox Fault ROC curve
+   - Replicated from ROC of PIMA dataset. ROC curve explained [HERE](https://towardsdatascience.com/mechanics-of-the-roc-curve-83b10ce3887f)
+      - Interactive plot of ROC changing the threshold value in the probability distribution, for both:
+         - Logistic regression
+         - Random forest
+
+# 5. UBER LUDWIG EXAMPLE
+Based on the [Titanic dataset](https://www.kaggle.com/c/titanic/),  copied into [this one](https://www.kaggle.com/brjapon/titanic) in my Kaggle profile 
+> Pending tests from the command line:
+  - `ludwig experiment`
+  - `ludwig visualize`
+
+There are more advanced examples with this dataset in Uber Ludwig examples in its [official repository](https://github.com/ludwig-ai/ludwig/tree/master/examples/titanic)
