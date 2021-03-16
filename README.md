@@ -27,7 +27,7 @@ Everything can be done with the bash script `./kaggle.sh`
 
 ## Using the Jupyter token
 In the http line above:
->`token=8e28bf1201d83f3f43521fba4b0cf382107781a4955ecf93`
+>`token=40119a2f87c125c72f7603945ca6b1561e0fb9ed45929234`
 
 ### Don't know why the next procedure does not set the password
 So if you want to set a password for accessing Jupyter, after launching the container go to:
