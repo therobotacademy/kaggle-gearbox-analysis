@@ -4,10 +4,10 @@ The command below has a serie of ENV variables that provide these features:
 - `-w /home/jupyter` & `-e HOME=/home/jupyter` are required so that notebooks are placed at the home path
 
 ```docker
-docker run --restart always -p 8811:8888 --name jupyter-pablo  --user root \
+docker run --restart always -p 8008:8888 --name jupyter-scipy  --user root \
 -e NB_USER=$(whoami) -e NB_GROUP=RnD -e NB_UID=$(id -u) -e NB_GID=$(cut -d: -f3 < <(getent group RnD)) -e JUPYTER_ENABLE_LAB=yes \
 -e HOME=/home/jupyter -e CHOWN_HOME_OPTS=-R -e CHOWN_HOME=yes -e GRANT_SUDO=yes  -e NB_UMASK=022 \
--w /home/jupyter -v /genomics1/pablo/jupyter:/home/jupyter  jupyter/scipy-notebook
+-w /home/jupyter -v $(pwd):/home/jupyter  jupyter/scipy-notebook
 ```
 **NOTE**: `$(whoami)` = pablo
 
